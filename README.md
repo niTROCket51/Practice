@@ -10,7 +10,7 @@ Name of Project - Stone-Paper-Scissor Champion
 	- [NumPy](#numpy)
 3. [Algorithms](#algorithms)
 4. [Implementation](#implementation)
-5. [Challenges](#challenges)
+5. [Issues](#issues)
 
 ### <a name="desciption"></a>1. Description of the Project
 The aim of our project is to make a program which would play stone - paper - scissor and should be capable of winning every time. So, we used [OpenCV](https://opencv.org/) on [Python](https://www.python.org/) for in order to identify the hand gestures. _(Gestures of paper, scissor and rock.)_ The output is shown on a 10x10 LED grid with the help of [Arduino Uno](http://www.arduino.cc/).
@@ -37,3 +37,7 @@ By drawing the convex hull and finding convexity defects
 Using ends of fingers as markers
 - //TODO **Algorithm 3:**
 Using Machine Learning
+
+### <a name="implementation"></a>4. Implementation
+
+1. 
