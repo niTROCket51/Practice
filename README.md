@@ -49,12 +49,17 @@ Below is the explanation of how we implemented our algorithms:
 	- Using a detected contour of maximum area it creates a convex hull around hand.
 	- Then it finds the defects in convex hull. To ensure it only counts the defects between the fingers we use angle between fingers as parameter. If angle is less than 90, then only it counts that defect, ignoring obtuse angled cases. For measuring angle we used cosine rule as length of sides is known.
 	- Another parameter used for comparison is the area ratio defined as:
-	<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\small&space;area.ratio&space;=&space;\frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times&space;100" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;area.ratio&space;=&space;\frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times&space;100" title="\small area.ratio = \frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times 100" /></a>
+	<a href="https://www.codecogs.com/eqnedit.php? latex=\dpi{120}&space;\small&space;area.ratio&space;=&space;\frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times&space;100" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;area.ratio&space;=&space;\frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times&space;100" title="\small area.ratio = \frac{area.of.convex.hull-area.of.contour}{area.of.contour}\times 100" /></a>
 	<br>
-	Area ratio finds the area in convex hull not covered by hand.
-	- Finally using no of defects point and area ratio it determines the gesture:
+	Area ratio finds the area in convex hull not covered by hand.<br>
+	Finally using no of defects point and area ratio it determines the gesture:
 Defect points | Area Ratio | Result
 --------------|------------|-------
 0 | less than 12 | rock
 1 | between 12 and 20 | scissor
 4 | greater than 20 | paper
+
+### <a name="issues"></a>5. Issues
+Issues faced in the project:
+**1. In detection of skin colour:** It is not possible to find exact hsv colour range for skin colour as skin colour varies from person to person. Still if one tries to widen the range of skin colour it starts detecting colours like red and yellow too.<br>
+**Fix:** At the moment,
