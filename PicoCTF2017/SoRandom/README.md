@@ -16,7 +16,7 @@ So, I wrote the [decode script](/PicoCTF2017/SoRandom/sorandom.py).
 ```
 encflag += chr((ord(c)-ord('a')+random.randrange(0,26))%26 + ord('a'))
 ```
-Since, `enflag` is known, I just looped through all possible values of `ord(c)` until the equation is satisfied.
+Since, `encflag` is known, I just looped through all possible values of `ord(c)` until the equation is satisfied.
 Upon running the program, I got the flag:<br>
 ```
 FLAG:ac8c0490fb0508767f1625cb8cea8c34
