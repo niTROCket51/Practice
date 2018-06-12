@@ -18,7 +18,9 @@ encflag += chr((ord(c)-ord('a')+random.randrange(0,26))%26 + ord('a'))
 ```
 Since, `enflag` is known, I just looped through all possible values of `ord(c)` until the equation is satisfied.
 Upon running the program, I got the flag:<br>
-`FLAG:ac8c0490fb0508767f1625cb8cea8c34`
+```
+FLAG:ac8c0490fb0508767f1625cb8cea8c34
+```
 
 **Note:** Running the program in Python 3 does not give the correct flag as the original flag was encoded with Python 2 and the `random.seed()` function works differently in Python 3 for non-integer inputs.
 An excerpt from [What's New in Python 3.2](http://docs.python.org/dev/whatsnew/3.2.html)
@@ -32,4 +34,4 @@ Despite setting the version to 1, `random.randrange(0, 26)` was generating diffe
 
 It states that a backward compatible seeder will be offered, not that the existing method will be backward compatible. So, only `random.random()` gives same result. `random.shuffle()` and `random.randrange()` produce different results.
 
-##### Peace. :blush:
+#### Peace. :blush:
