@@ -23,7 +23,7 @@ FLAG:ac8c0490fb0508767f1625cb8cea8c34
 ```
 
 **Note:** Running the program in Python 3 does not give the correct flag as the original flag was encoded with Python 2 and the `random.seed()` function works differently in Python 3 for non-integer inputs.
-An excerpt from [What's New in Python 3.2](http://docs.python.org/dev/whatsnew/3.2.html)
+An excerpt from [What's New in Python 3.2](https://docs.python.org/dev/whatsnew/3.2.html#porting-to-python-3-2)
 > The `random.seed()` function and method now salt string seeds with an sha512 hash function. To access the previous version of seed in order to reproduce Python 3.1 sequences, set the version argument to 1, random.seed(s, version=1).
 
 Despite setting the version to 1, `random.randrange(0, 26)` was generating different values. It is probably due to change in `randrange()` function.
